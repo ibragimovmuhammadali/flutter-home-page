@@ -5,14 +5,10 @@ import 'package:flutter_home_page/translate_page.dart';
 
 class HomePage extends StatefulWidget {
   static const String id = "home_page";
-  final String? userId;
-  const HomePage({super.key, this.userId});
-
+  const HomePage({super.key});
   @override
   State<HomePage> createState() => _HomePageState();
 }
-
-
 
 class _HomePageState extends State<HomePage> {
 

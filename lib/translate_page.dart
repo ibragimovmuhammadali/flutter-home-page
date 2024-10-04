@@ -11,6 +11,12 @@ class TranslatePage extends StatefulWidget {
 }
 class _TranslatePageState extends State<TranslatePage> {
 
+  _callHomePage(){
+    Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context){
+      return HomePage();
+    }));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,9 +31,10 @@ class _TranslatePageState extends State<TranslatePage> {
             Row(
               children: [
                 Expanded(
-                    child: MaterialButton(
+                    child: MaterialButton (
                         color: Colors.red,
                         onPressed: () {
+                          _callHomePage();
                          context.setLocale(Locale('en', 'US'));
                         },
                       child: Text("English"),
@@ -41,6 +48,7 @@ class _TranslatePageState extends State<TranslatePage> {
                   child: MaterialButton(
                     color: Colors.green,
                     onPressed: () {
+                      _callHomePage();
                       context.setLocale(Locale('ru', 'RU'));
                     },
                     child: Text("Russian"),
@@ -54,6 +62,7 @@ class _TranslatePageState extends State<TranslatePage> {
                   child: MaterialButton(
                     color: Colors.yellow,
                     onPressed: () {
+                      _callHomePage();
                       context.setLocale(Locale('uz', 'UZ'));
                     },
                     child: Text("Uzbek"),
@@ -67,6 +76,7 @@ class _TranslatePageState extends State<TranslatePage> {
                   child: MaterialButton(
                     color: Colors.blue,
                     onPressed: () {
+                      _callHomePage();
                       context.setLocale(Locale('ko', 'KR'));
                     },
                     child: Text("Korean"),
@@ -80,6 +90,7 @@ class _TranslatePageState extends State<TranslatePage> {
                   child: MaterialButton(
                     color: Colors.orange,
                     onPressed: () {
+                      _callHomePage();
                       context.setLocale(Locale('ja', 'JP'));
                     },
                     child: Text("Japanese"),
